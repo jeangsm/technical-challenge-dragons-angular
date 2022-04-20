@@ -1,0 +1,24 @@
+<div class="page-wrapper">
+  <div class="login-card">
+    <span class="logo-title">Sicredi Dragons</span>
+    <h1 class="text-center">Entrar</h1>
+    <form ngNativeValidate (ngSubmit)="submit()" [formGroup]="loginForm">
+      <div class="form-row">
+        <label>Email</label>
+        <input type="email" formControlName="email" name="email" required>
+      </div>
+      <div class="form-row">
+        <label>Senha</label>
+        <input type="password" formControlName="password" name="password" required>
+      </div>
+      <p class="error-message" *ngIf="errorMessage">{{errorMessage}}</p>
+      <button type="submit" class="primary" [disabled]="submitting">
+        <div class="button-content">
+          <span style="color: black">Entrar</span>
+          <span *ngIf="submitting" class="lds-dual-ring lds-button"></span>
+        </div>
+      </button>
+    </form>
+  </div>
+</div>
+

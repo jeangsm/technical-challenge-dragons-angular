@@ -1,0 +1,24 @@
+<h1>Novo Dragão</h1>
+
+<form ngNativeValidate (ngSubmit)="submit()" [formGroup]="dragonForm">
+  <div class="form-row">
+    <label>Nome:</label>
+    <input type="text" formControlName="name" name="name" required>
+  </div>
+  <div class="form-row">
+    <label>Tipo:</label>
+    <input type="text" formControlName="type" name="type" required>
+  </div>
+  <div class="actions">
+    <button type="button" routerLink="../">Cancelar</button>
+    <button type="submit" class="primary" [disabled]="submitting">
+      <div class="button-content">
+        <span style="color: black">Cadastrar</span>
+        <span *ngIf="submitting" class="lds-dual-ring lds-button"></span>
+      </div>
+    </button>
+  </div>
+  <!-- <select formControlName="type" name="type" required>
+    <option value=""></option>
+  </select> -->
+</form>

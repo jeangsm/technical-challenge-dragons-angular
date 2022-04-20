@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=MedievalSharp&family=Open+Sans:wght@400;700&family=Playfair+Display:wght@400;800&display=swap');
+
+* {
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  // font-family: 'Playfair Display', serif;
+  font-family: 'Playfair Display', serif;
+  color: #e1bb34
+}
+
+h1, h2 {
+  font-weight: 800;
+}
+
+h3, h4, h5, h6 {
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 4em;
+  text-align: left;
+  margin-bottom: 0.5em;
+}
+
+h2 {
+  font-size: 2em;
+  text-align: left;
+  margin-bottom: 0.5em;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}

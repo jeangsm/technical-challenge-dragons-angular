@@ -1,0 +1,20 @@
+<ng-container *ngIf="loaded">
+  <div class="image-container">
+    <img src="../../../../assets/images/97-972411_dragon-white-dragon-logo-png-clipart.png">
+  </div>
+  <div class="details">
+    <h1>{{dragon?.name}}</h1>
+    <p><b>{{dragon?.type}}</b></p>
+    <p>{{dragon?.createdAt | date:'dd MMM yyyy':'UTC'}}</p>
+  </div>
+</ng-container>
+
+<ng-container *ngIf="!loaded">
+  <div class="loader-container">
+    <div class="lds-dual-ring"></div>
+  </div>
+</ng-container>
+
+<button class="btn-sm" style="position: absolute; right: 0" routerLink="../../">
+  Voltar
+</button>

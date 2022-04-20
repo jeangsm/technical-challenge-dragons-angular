@@ -1,0 +1,43 @@
+button {
+  margin: 7.5px;
+  padding: 10px 35px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: black;
+  box-shadow: 0 0 5px #eee;
+  border-radius: 10px;
+  font-size: 1em;
+  background-image: linear-gradient(to right, #aaa6a2 0%, #ebe9e2  51%, #aaa6a2  100%);
+  cursor: pointer;
+}
+
+button.btn-sm {
+  font-size: 0.75em;
+  margin: 5px;
+  padding: 5px;
+}
+
+button:hover {
+  background-position: right center; /* change the direction of the change here */
+  // color: #fff;
+  text-decoration: none;
+  text-shadow: 1px 1px 2px white;
+}
+
+button.primary {background-image: linear-gradient(to right, #F7971E 0%, #FFD200  51%, #F7971E  100%);}
+button.danger {background-image: linear-gradient(to right, #ff4c46 0%, #ff1f27  51%, #ff4c46  100%)}
+
+button:disabled {background-image: linear-gradient(to right, rgb(124, 124, 124) 0%, #757575  51%, rgb(124, 124, 124)  100%) !important}
+@media screen and (min-width: 768px) {
+  button.btn-sm {
+    padding: 5px 25px;
+  }
+}
+
+.button-content {
+  display: flex;
+  justify-content:center;
+  color: black;
+}

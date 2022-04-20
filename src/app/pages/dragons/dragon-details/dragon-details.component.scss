@@ -1,0 +1,27 @@
+:host {
+  display:flex;
+  flex-direction: column;
+  position: relative;
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    .image-container {
+      margin-right: 4em;
+    }
+
+  }
+}
+
+.image-container {
+  display:flex;
+}
+
+img {
+  margin: 0 auto;
+  max-height: 250px;
+}
+
+p {
+  margin-bottom: 2em;
+
+}

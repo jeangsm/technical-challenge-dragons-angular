@@ -1,0 +1,52 @@
+<div class="list-header">
+  <h1>Lista de Dragões</h1>
+  <button routerLink="./new">Novo Dragão</button>
+</div>
+<div class="loader-container" *ngIf="!loaded">
+  <div class="lds-dual-ring"></div>
+</div>
+<ul>
+  <li *ngFor="let dragon of dragons">
+    <app-dragon-card class="borders" [dragon]="dragon" (remove)="openModal('remove-dragon',dragon)" (update)="openModal('update-dragon',dragon)"></app-dragon-card>
+    <!-- <div>
+      <button class="danger btn-sm" (click)="openModal('remove-dragon',dragon)">X</button>
+      <button class="btn-sm" (click)="openModal('update-dragon',dragon)">Edit</button>
+      <button class="primary btn-sm" routerLink="./details/{{dragon.id}}">Details</button>
+    </div> -->
+  </li>
+</ul>
+
+<dragon-modal id="remove-dragon">
+  <b style="margin-bottom: 1em">Tem certeza que deseja remover o dragão {{selectedDragon?.name}}?</b>
+  <div class="actions">
+    <button (click)="closeModal('remove-dragon');">Não</button>
+    <button (click)="removeDragon();" class="danger" [disabled]="updatingRemoving">
+      <div class="button-content">
+        <span style="color: black">Remover</span>
+        <span *ngIf="updatingRemoving" class="lds-dual-ring lds-button"></span>
+      </div>
+    </button>
+  </div>
+</dragon-modal>
+
+<dragon-modal id="update-dragon">
+  <form ngNativeValidate (ngSubmit)="submit()" [formGroup]="dragonForm">
+    <div class="form-row">
+      <label>Nome:</label>
+      <input type="text" formControlName="name" name="name" required>
+    </div>
+    <div class="form-row">
+      <label>Tipo:</label>
+      <input type="text" formControlName="type" name="type" required>
+    </div>
+    <div class="actions">
+      <button type="button" (click)="closeModal('update-dragon');">Cancelar</button>
+      <button type="submit" class="primary" [disabled]="updatingRemoving">
+        <div class="button-content">
+          <span style="color: black">Atualizar</span>
+          <span *ngIf="updatingRemoving" class="lds-dual-ring lds-button"></span>
+        </div>
+      </button>
+    </div>
+  </form>
+</dragon-modal>

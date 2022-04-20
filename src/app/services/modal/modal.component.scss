@@ -1,0 +1,53 @@
+:host {
+  display: none;
+
+  .dragon-modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    z-index: 1000;
+
+    overflow: auto;
+
+    .dragon-modal-body {
+      border-radius: 25px;
+      max-width:50%;
+      position: relative;
+      padding: 20px;
+      background: #101d23;
+      background: url('../../../assets/images/background-dropdown.jpg');
+
+      margin: 0 auto;
+      top: 50%;
+      transform: translateY(-50%);
+
+      // @media screen and (min-width: 768px) {
+      //   top:40%;
+      //   left: 20%;
+
+      //   margin: 40px;
+      // }
+    }
+  }
+
+  .dragon-modal-background {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    background-color: #000;
+    opacity: 0.75;
+
+    z-index: 900;
+  }
+}
+
+body.dragon-modal-open {
+  overflow: hidden;
+}
+

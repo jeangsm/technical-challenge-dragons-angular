@@ -1,0 +1,24 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  padding: 1em 0;
+}
+
+.actions {
+  display:flex;
+  margin-top: 1em;
+}
+
+@media screen and (min-width: 768px) {
+  :host {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .actions {
+    margin-top: 0;
+  }
+}
+
+

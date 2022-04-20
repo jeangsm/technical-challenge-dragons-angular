@@ -1,0 +1,19 @@
+<header>
+  <div class="nav-container">
+    <span class="logo-title">Sicredi Dragons</span>
+    <nav>
+      <icon-logout size="32" (click)="signOut()"></icon-logout>
+    </nav>
+  </div>
+</header>
+
+  <!-- <div class="page-wrapper" [@fadeAnimation]="outlet.isActivated ? outlet.activatedRoute : ''"> -->
+  <!-- <div class="page-wrapper" [@slideInOut]="outlet.isActivated ? outlet.activatedRoute : ''"> -->
+  <!-- <div class="page-wrapper" [@fadeInAnimation]="outlet.isActivated ? outlet.activatedRoute : ''"> -->
+<div class="page-wrapper">
+  <div class="container">
+    <main >
+      <router-outlet #outlet="outlet"></router-outlet>
+    </main>
+  </div>
+</div>

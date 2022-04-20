@@ -1,0 +1,33 @@
+.page-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height:100vh;
+}
+
+.login-card {
+  display:flex;
+  flex-direction: column;
+  background: #101d23;
+  padding: 2em;
+  background: url('../../../../assets/images/background-main.jpg');
+  border-radius: 1em;
+  box-shadow: 0 0 1em black;
+}
+
+.logo-title {
+  font-family: 'MedievalSharp', cursive;
+  font-size: 2em;
+  color: #e1bb34;
+  margin-bottom: 0.6em;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.error-message {
+  color: red
+}

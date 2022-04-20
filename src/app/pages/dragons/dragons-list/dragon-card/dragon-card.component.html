@@ -1,0 +1,9 @@
+<div>
+  <h2>{{dragon?.name}}</h2>
+  <span>{{dragon?.type}}</span>
+</div>
+<div class="actions">
+  <button class="danger btn-sm" (click)="onRemove()">Remover</button>
+  <button class="btn-sm" (click)="onUpdate()">Editar</button>
+  <button class="primary btn-sm" routerLink="./details/{{dragon?.id}}">Detalhes</button>
+</div>

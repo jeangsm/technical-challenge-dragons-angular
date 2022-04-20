@@ -1,0 +1,55 @@
+header {
+  height: 75px;
+  // background: url('../../../assets/images/cracks/cracks_top_1920.jpg');
+  background: url('../../../assets/images/tabbedelement.png');
+  background-size: contain;
+  margin-bottom:2em;
+}
+
+.logo-title {
+  font-family: 'MedievalSharp', cursive;
+  font-size: 2em;
+  color: #e1bb34;
+}
+
+.page-wrapper {
+  padding: 16px;
+}
+
+.nav-container, .container {
+  margin: 0 auto;
+
+  @media screen and (min-width: 576px) {
+    max-width: 540px;
+  }
+
+  @media screen and (min-width: 768px) {
+    max-width: 720px;
+  }
+
+  @media screen and (min-width: 992px) {
+    max-width: 960px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    max-width: 1140px
+  }
+}
+
+.nav-container {
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  @media screen and (max-width: 576px) {
+    padding: 0 2em;
+  }
+}
+
+.container {
+  background: #101d23;
+  background: url('../../../assets/images/background-main.jpg');
+  padding: 2em;
+  border-radius: 1em;
+  box-shadow: 0 0 1em black;
+}
