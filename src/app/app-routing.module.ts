@@ -17,6 +17,9 @@ const routes: Routes = [
     canActivate: [DragonsGuard],
     loadChildren: () => import('./pages/dragons/dragons.module').then(m => m.DragonsModule)
   },
+  {
+    path: '**', redirectTo: '/dragons'
+  }
 ];
 
 @NgModule({

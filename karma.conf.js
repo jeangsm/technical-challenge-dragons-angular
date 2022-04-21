@@ -25,7 +25,7 @@ module.exports = function (config) {
       suppressAll: true // removes the duplicated traces
     },
     coverageReporter: {
-      dir: require('path').join(__dirname, './coverage/teste-sicredi-angular'),
+      dir: require('path').join(__dirname, './coverage/dragons-angular'),
       subdir: '.',
       reporters: [
         { type: 'html' },

@@ -1,5 +1,6 @@
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterTestingModule } from '@angular/router/testing';
 
 import { DragonsComponent } from './dragons.component';
@@ -11,7 +12,7 @@ describe('DragonsComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [ DragonsComponent ],
-      imports: [HttpClientTestingModule, RouterTestingModule]
+      imports: [HttpClientTestingModule, RouterTestingModule, NoopAnimationsModule]
     })
     .compileComponents();
   });
